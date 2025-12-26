@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { NAV_LINKS, PAGE_DATA } from '../constants';
+import { NAV_LINKS } from '../constants';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,11 +86,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       {/* Footer */}
       <footer className="bg-pw-dark text-white pt-16 pb-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/5 pb-16">
             <div className="md:col-span-1">
               <h3 className="text-xl font-bold text-pw-yellow mb-6">PW Coupon Hub</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                We provide the most up-to-date and verified Physics Wallah coupon codes for 2026 batches. Help students save more on quality education.
+                Providing verified Physics Wallah coupon codes for 2026 sessions. Join thousands of students saving on quality JEE, NEET, and GATE coaching.
               </p>
               <div className="flex space-x-4">
                 <a href="https://t.me/PWCOUPONNEW" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#0088cc] transition-colors" aria-label="Telegram">
@@ -102,35 +102,42 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-6">Explore Pages</h3>
+              <h3 className="text-lg font-bold mb-6 text-white uppercase tracking-tighter">Explore Offers</h3>
               <ul className="space-y-3 text-sm text-gray-400">
-                {NAV_LINKS.map((link) => (
-                  <li key={link.path}>
-                    <Link to={link.path} className="hover:text-pw-yellow transition-colors flex items-center">
-                      <span className="w-1.5 h-1.5 bg-pw-yellow rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                <li><Link to="/pw-coupon-code" className="hover:text-pw-yellow transition-colors">PW Coupon Code 2026</Link></li>
+                <li><Link to="/pw-jee-coupon-code" className="hover:text-pw-yellow transition-colors">IIT JEE Batch Discounts</Link></li>
+                <li><Link to="/pw-neet-coupon-code" className="hover:text-pw-yellow transition-colors">NEET Medical Offers</Link></li>
+                <li><Link to="/pw-gate-coupon-code" className="hover:text-pw-yellow transition-colors">GATE Wallah Deals</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-6">Popular Coupons</h3>
+              <h3 className="text-lg font-bold mb-6 text-white uppercase tracking-tighter">Student Resources</h3>
               <ul className="space-y-3 text-sm text-gray-400">
-                <li><Link to={PAGE_DATA.jee.path} className="hover:text-pw-yellow">{PAGE_DATA.jee.h1}</Link></li>
-                <li><Link to={PAGE_DATA.neet.path} className="hover:text-pw-yellow">{PAGE_DATA.neet.h1}</Link></li>
-                <li><Link to={PAGE_DATA.gate.path} className="hover:text-pw-yellow">{PAGE_DATA.gate.h1}</Link></li>
-                <li><Link to={PAGE_DATA.pwCoupon.path} className="hover:text-pw-yellow">General PW Promo</Link></li>
+                <li><Link to="/best-neet-batches-physics-wallah-2026" className="hover:text-pw-yellow transition-colors">Batch Comparison 2026</Link></li>
+                <li><Link to="/how-to-apply-pw-coupon-code-2026" className="hover:text-pw-yellow transition-colors">Coupon Redemption Guide</Link></li>
+                <li><Link to="/pw-offline-vidyapith-vs-online-batches" className="hover:text-pw-yellow transition-colors">Offline vs Online Comparison</Link></li>
+                <li><Link to="/disclaimer" className="hover:text-pw-yellow transition-colors">Affiliate Disclaimer</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-6">Support 2026</h3>
-              <p className="text-sm text-gray-400 mb-6">Need help with code application? Join our community or contact us via social media.</p>
-              <a href="https://t.me/PWCOUPONNEW" target="_blank" rel="noopener noreferrer" className="text-xs bg-pw-yellow text-pw-dark font-black px-6 py-2 rounded-full uppercase tracking-widest inline-block hover:bg-yellow-400 transition-colors">Help Center</a>
+              <h3 className="text-lg font-bold mb-6 text-white uppercase tracking-tighter">Support 2026</h3>
+              <p className="text-sm text-gray-400 mb-6 leading-relaxed">Need help with batch selection or coupon application? Reach out to us via our help center.</p>
+              <a href="https://t.me/PWCOUPONNEW" target="_blank" rel="noopener noreferrer" className="text-[10px] bg-pw-yellow text-pw-dark font-black px-6 py-2.5 rounded-full uppercase tracking-widest inline-block hover:bg-white transition-all shadow-lg">Telegram Help Center</a>
             </div>
           </div>
-          <div className="mt-16 pt-8 border-t border-gray-800 text-center text-[10px] text-gray-500 uppercase tracking-widest">
-            <p>&copy; 2026 PW Coupon Code Hub. All rights reserved. This platform is powered by students for students.</p>
+
+          <div className="mt-12 py-8 border-t border-white/5 text-center">
+            <div className="max-w-3xl mx-auto mb-8">
+              <p className="text-[10px] text-gray-500 uppercase tracking-widest leading-relaxed mb-4">
+                <strong>Affiliate Disclosure:</strong> PW Coupon Hub provides verified Physics Wallah discount offers and educational guides. We may earn a small commission through affiliate links at no extra cost to you. This platform is independently managed for student help and is not the official Physics Wallah website. All <Link to="/disclaimer" className="text-pw-yellow underline decoration-pw-yellow/20">verified PW coupons</Link> are research-based.
+              </p>
+            </div>
+            <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] leading-loose">
+              &copy; 2026 PW Coupon Code Hub. All rights reserved. <br className="md:hidden" />
+              Empowering students through affordable and quality education. 
+              <br />
+              Physics Wallah is a registered trademark of PhysicsWallah Pvt Ltd.
+            </p>
           </div>
         </div>
       </footer>

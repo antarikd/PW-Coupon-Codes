@@ -115,7 +115,7 @@ const Home: React.FC = () => {
         <div className="flex flex-wrap justify-center items-center gap-4 mb-24">
            {/* Telegram Small */}
            <a 
-            href="https://t.me/pw_updates" 
+            href="https://t.me/PWCOUPONNEW" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center space-x-2 bg-[#0088cc] hover:bg-[#0077b5] text-white px-5 py-2.5 rounded-full font-black uppercase tracking-widest text-[10px] shadow-lg transition-all hover:-translate-y-1 active:scale-95"
@@ -126,7 +126,7 @@ const Home: React.FC = () => {
 
            {/* Instagram Small */}
            <a 
-            href="https://instagram.com/physicswallah" 
+            href="https://www.instagram.com/antarik_antarik/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center space-x-2 bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white px-5 py-2.5 rounded-full font-black uppercase tracking-widest text-[10px] shadow-lg transition-all hover:-translate-y-1 active:scale-95"

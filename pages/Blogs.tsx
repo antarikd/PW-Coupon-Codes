@@ -2,6 +2,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+const BANNER_IMAGE = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmKRSSz7GbiLfE8jvopMNYHWYEAgsZKpFyFw&s";
+
 const Blogs: React.FC = () => {
   useEffect(() => {
     document.title = "PW Coupons Blog – Latest Preparation Tips & Discounts";
@@ -25,12 +27,9 @@ const Blogs: React.FC = () => {
           <article key={post.id} className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col">
             <div className="h-48 bg-pw-dark/10 relative overflow-hidden">
                <img 
-                src="pw-banner.jpg" 
+                src={BANNER_IMAGE} 
                 alt={post.title} 
                 className="w-full h-full object-cover opacity-80"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = `https://picsum.photos/400/300?random=${post.id}`;
-                }}
               />
               <div className="absolute top-4 left-4 bg-pw-yellow text-pw-dark text-xs font-bold px-2 py-1 rounded">2026 UPDATE</div>
             </div>

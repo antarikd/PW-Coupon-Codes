@@ -4,6 +4,8 @@ import { useParams, Link } from 'react-router-dom';
 import { PAGE_DATA, PRIMARY_COUPON } from '../constants';
 import CouponCard from '../components/CouponCard';
 
+const BANNER_IMAGE = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmKRSSz7GbiLfE8jvopMNYHWYEAgsZKpFyFw&s";
+
 interface CouponTemplateProps {
   pageKey: 'pwCoupon' | 'jee' | 'neet' | 'gate';
 }
@@ -36,12 +38,9 @@ const CouponTemplate: React.FC<CouponTemplateProps> = ({ pageKey }) => {
 
       <div className="max-w-7xl mx-auto px-4 -mt-6">
         <img 
-          src="pw-banner.jpg" 
+          src={BANNER_IMAGE} 
           alt={`${data.h1} Hero`} 
           className="w-full h-auto rounded-xl shadow-lg object-cover max-h-[300px]"
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = `https://picsum.photos/1200/400?random=${pageKey}`;
-          }}
         />
       </div>
 

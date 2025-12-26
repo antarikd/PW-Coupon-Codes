@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { PAGE_DATA } from '../constants';
+import { PAGE_DATA, PRIMARY_COUPON } from '../constants';
 import CouponCard from '../components/CouponCard';
 
 interface CouponTemplateProps {
@@ -20,7 +20,7 @@ const CouponTemplate: React.FC<CouponTemplateProps> = ({ pageKey }) => {
 
   const getSpecificContent = () => {
     switch(pageKey) {
-      case 'jee': return "Aspiring for IIT? Use our special JEE discount code for Lakshya and Arjun batches.";
+      case 'jee': return "Aspiring for IIT? Use our special JEE discount code for Lakshya and Arjuna batches.";
       case 'neet': return "Crack NEET 2026 with PW. Use our dedicated medical batch coupon for the best price.";
       case 'gate': return "GATE Wallah offers top-tier engineering guidance. Save big on your technical prep today.";
       default: return "Save on every single Physics Wallah course with our verified promo codes.";
@@ -57,7 +57,7 @@ const CouponTemplate: React.FC<CouponTemplateProps> = ({ pageKey }) => {
             
             <div className="bg-yellow-50 border-l-4 border-pw-yellow p-6 rounded-r-lg mb-8">
               <h3 className="font-bold text-pw-dark mb-2">Pro Tip for 2026 Aspirants</h3>
-              <p className="text-sm">Early bird batches often have additional discounts. Combine them with code <strong>BADMUN001</strong> for maximum benefits.</p>
+              <p className="text-sm">Early bird batches often have additional discounts. Combine them with code <strong>{PRIMARY_COUPON}</strong> for maximum benefits.</p>
             </div>
 
             <h3 className="text-xl font-bold mb-3">Why choose this code?</h3>

@@ -1,14 +1,14 @@
 
 import React, { useEffect, useState } from 'react';
 import CouponCard from '../components/CouponCard';
-import { PAGE_DATA, PRIMARY_COUPON } from '../constants';
+import { PAGE_DATA, PRIMARY_COUPON, NEW_USER_COUPON } from '../constants';
 import { Link } from 'react-router-dom';
 
-const CopyButton: React.FC = () => {
+const CopyButton: React.FC<{ code: string }> = ({ code }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(PRIMARY_COUPON);
+    navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -35,7 +35,7 @@ const Home: React.FC = () => {
   }, []);
 
   const faqs = [
-    { q: "Is the PW Coupon Code BADMUN001 valid for all batches?", a: "Yes, BADMUN001 is a universal code valid for JEE, NEET, GATE, UPSC, and all other Physics Wallah batches in 2026." },
+    { q: `Is the PW Coupon Code ${PRIMARY_COUPON} valid for all batches?`, a: `Yes, ${PRIMARY_COUPON} is a universal code valid for JEE, NEET, GATE, UPSC, and all other Physics Wallah batches in 2026.` },
     { q: "How much discount can I get using this code?", a: "You get the maximum possible discount allowed by Physics Wallah at the time of purchase, typically ranging from flat discounts to percentage-based savings." },
     { q: "Can I use this coupon on the PW mobile app?", a: "Absolutely. The code works perfectly on both the PW Android/iOS App and the official website." }
   ];
@@ -71,13 +71,32 @@ const Home: React.FC = () => {
         />
       </div>
 
+      {/* NEW USER EXCLUSIVE SECTION */}
+      <section className="py-12 px-4 max-w-7xl mx-auto mt-12">
+        <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl overflow-hidden relative group">
+           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl group-hover:bg-white/20 transition-all duration-700"></div>
+           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="text-center md:text-left">
+                <span className="bg-white text-red-600 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest mb-4 inline-block shadow-lg">Special Offer</span>
+                <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tighter">New User Max Discount Code</h2>
+                <p className="text-white/80 text-lg font-medium max-w-md">First time on Physics Wallah? Use this exclusive code to unlock the highest possible savings on your first batch.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-[2rem] text-center w-full md:w-auto">
+                <span className="block text-white/60 text-xs font-bold uppercase mb-2 tracking-widest">Use Code</span>
+                <div className="text-4xl md:text-5xl font-black text-white mb-6 font-mono tracking-wider">{NEW_USER_COUPON}</div>
+                <CopyButton code={NEW_USER_COUPON} />
+              </div>
+           </div>
+        </div>
+      </section>
+
       {/* Main Coupon Section */}
       <section id="coupons" className="py-24 px-4 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl font-black mb-8 text-pw-dark leading-tight tracking-tighter">Why Use Our Verified PW Coupon?</h2>
             <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-              Preparing for competitive exams like <strong className="text-pw-dark">JEE, NEET, or GATE</strong> requires top-notch guidance. Physics Wallah offers the best education at the lowest prices, and with <strong className="text-pw-dark">BADMUN001</strong>, we make it even more affordable for every student in India.
+              Preparing for competitive exams like <strong className="text-pw-dark">JEE, NEET, or GATE</strong> requires top-notch guidance. Physics Wallah offers the best education at the lowest prices, and with <strong className="text-pw-dark">{PRIMARY_COUPON}</strong>, we make it even more affordable for every student in India.
             </p>
             <div className="space-y-4 mb-10">
               {['Highest Savings Guaranteed', 'Valid for All 2026 Batches', 'Instant Cashback Offers', 'Trusted by 1M+ Students'].map((item) => (
@@ -139,7 +158,7 @@ const Home: React.FC = () => {
                     <td className="px-8 py-6 text-sm font-mono font-black text-red-600 bg-red-50/50">{PRIMARY_COUPON}</td>
                     <td className="px-8 py-6 text-sm font-black text-green-600 uppercase tracking-tighter italic">MAX DISCOUNT</td>
                     <td className="px-8 py-6 text-right">
-                      <CopyButton />
+                      <CopyButton code={PRIMARY_COUPON} />
                     </td>
                   </tr>
                 ))}

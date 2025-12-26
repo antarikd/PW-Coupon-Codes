@@ -24,7 +24,7 @@ const CouponCard: React.FC<CouponCardProps> = ({ category = "Physics Wallah" }) 
         </span>
         <h3 className="text-3xl font-bold text-white tracking-tight">Save on {category}</h3>
       </div>
-      <div className="p-12 flex flex-col items-center text-center">
+      <div className="p-10 flex flex-col items-center text-center">
         <div 
           className="relative group cursor-pointer w-full mb-8" 
           onClick={handleCopy}
@@ -33,13 +33,13 @@ const CouponCard: React.FC<CouponCardProps> = ({ category = "Physics Wallah" }) 
           {/* Animated glow background */}
           <div className="absolute -inset-2 bg-gradient-to-r from-pw-yellow via-orange-400 to-pw-yellow rounded-[2rem] blur-xl opacity-10 group-hover:opacity-40 transition-opacity duration-700 animate-pulse"></div>
           
-          <div className="relative bg-white border-4 border-dashed border-pw-dark/10 rounded-[2rem] py-10 px-6 flex flex-col items-center justify-center transition-all duration-500 group-hover:border-pw-yellow group-hover:bg-gray-50/50">
-            <span className="text-4xl md:text-5xl font-black text-pw-dark tracking-normal mb-6 select-all transition-transform duration-500 group-hover:scale-105 drop-shadow-sm">
+          <div className="relative bg-white border-4 border-dashed border-pw-dark/10 rounded-[2rem] py-8 px-6 flex flex-col items-center justify-center transition-all duration-500 group-hover:border-pw-yellow group-hover:bg-gray-50/50">
+            <span className="text-3xl md:text-4xl font-black text-pw-dark tracking-widest mb-4 select-all transition-transform duration-500 group-hover:scale-105 drop-shadow-sm">
               {PRIMARY_COUPON}
             </span>
-            <div className="w-full max-w-[280px]">
+            <div className="w-full max-w-[240px]">
               <button 
-                className={`w-full py-4 rounded-2xl font-black text-lg uppercase tracking-widest transition-all duration-300 transform active:scale-95 shadow-xl ${
+                className={`w-full py-3 rounded-xl font-black text-sm uppercase tracking-widest transition-all duration-300 transform active:scale-95 shadow-lg ${
                   copied ? 'bg-green-500 text-white' : 'bg-pw-dark text-white hover:bg-black group-hover:bg-pw-yellow group-hover:text-pw-dark'
                 }`}
               >
@@ -49,7 +49,7 @@ const CouponCard: React.FC<CouponCardProps> = ({ category = "Physics Wallah" }) 
           </div>
         </div>
         
-        <div className="flex items-center space-x-2 text-gray-400 font-semibold text-sm mb-8 uppercase tracking-widest">
+        <div className="flex items-center space-x-2 text-gray-400 font-semibold text-xs mb-8 uppercase tracking-widest">
           <span className="w-2 h-2 rounded-full bg-green-500 animate-ping"></span>
           <span>Apply at Checkout for Max Savings</span>
         </div>

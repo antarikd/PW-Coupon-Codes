@@ -126,7 +126,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <div>
               <h3 className="text-lg font-semibold mb-6">Support 2026</h3>
               <p className="text-sm text-gray-400 mb-6">Need help with code application? Join our community or contact us via social media.</p>
-              <Link to="/blogs" className="text-xs bg-pw-yellow text-pw-dark font-black px-6 py-2 rounded-full uppercase tracking-widest inline-block hover:bg-yellow-400 transition-colors">Help Center</Link>
+              <a href="https://t.me/PWCOUPONNEW" target="_blank" rel="noopener noreferrer" className="text-xs bg-pw-yellow text-pw-dark font-black px-6 py-2 rounded-full uppercase tracking-widest inline-block hover:bg-yellow-400 transition-colors">Help Center</a>
             </div>
           </div>
           <div className="mt-16 pt-8 border-t border-gray-800 text-center text-[10px] text-gray-500 uppercase tracking-widest">

@@ -76,12 +76,10 @@ const Home: React.FC = () => {
 
         {/* SIDE-BY-SIDE MAIN OFFERS */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-12 items-stretch">
-          {/* Left: Standard Coupon Card */}
           <div className="flex flex-col">
             <CouponCard category="Physics Wallah" />
           </div>
 
-          {/* Right: New User Specific Card */}
           <div className="flex flex-col">
             <div className="bg-gradient-to-br from-red-600 to-orange-700 rounded-[3rem] p-1 shadow-2xl h-full">
               <div className="bg-white/5 backdrop-blur-md rounded-[2.9rem] p-10 md:p-14 h-full flex flex-col justify-between relative overflow-hidden group">
@@ -111,9 +109,8 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* COMPACT COMMUNITY BUTTONS (Simplified Socials) */}
+        {/* COMPACT COMMUNITY BUTTONS */}
         <div className="flex flex-wrap justify-center items-center gap-4 mb-24">
-           {/* Telegram Small */}
            <a 
             href="https://t.me/PWCOUPONNEW" 
             target="_blank" 
@@ -124,7 +121,6 @@ const Home: React.FC = () => {
              <span>Telegram Group</span>
            </a>
 
-           {/* Instagram Small */}
            <a 
             href="https://www.instagram.com/antarik_antarik/" 
             target="_blank" 
@@ -186,6 +182,29 @@ const Home: React.FC = () => {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </div>
+        </section>
+
+        {/* HELP NOTICE SECTION (New) */}
+        <section className="mb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white border-2 border-pw-yellow/20 rounded-[2.5rem] p-10 md:p-14 text-center shadow-xl shadow-pw-yellow/5 relative overflow-hidden transition-all hover:scale-[1.01]">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-pw-yellow/5 rounded-full -mr-16 -mt-16"></div>
+              <h3 className="text-pw-dark font-black text-2xl md:text-3xl mb-6 leading-tight tracking-tight">
+                If PW coupon code is not working <span className="underline decoration-pw-yellow decoration-4 underline-offset-8">use Help center bellow</span> we will definitely help you.
+              </h3>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-8">
+                <a 
+                  href="https://t.me/PWCOUPONNEW" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-[#0088cc] text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-xs flex items-center shadow-lg hover:shadow-[#0088cc]/30 transition-all active:scale-95"
+                >
+                  <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.35-.49.96-.75 3.78-1.65 6.31-2.74 7.58-3.27 3.61-1.5 4.35-1.76 4.84-1.77.11 0 .35.03.5.16.12.1.16.24.18.33.02.06.02.19 0 .28z"/></svg>
+                  <span>Open Help Center</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>

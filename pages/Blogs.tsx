@@ -1,8 +1,7 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const BANNER_IMAGE = "https://scontent.fccu22-1.fna.fbcdn.net/v/t39.30808-6/607131865_122151085334737608_7118691726728882233_n.webp?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qhNIxino_Q4Q7kNvwFAgjLh&_nc_oc=Admi8DjeZ5xvvSwXyVZRTtzfGVzE0P8MUTMvwR_I-kK5BAe8jpdZXNSlR4mu4fQfBS0&_nc_zt=23&_nc_ht=scontent.fccu22-1.fna&_nc_gid=jdp7VVUlw0Ls-fjS3nZlhA&oh=00_AfmQpR89KdQh32s5VuucrJN9laV_y2rHCaiWV820WP9FTg&oe=69542526";
+const BANNER_IMAGE = "https://png.pngtree.com/background/20250120/original/pngtree-best-platforms-for-digital-education-and-e-learning-picture-image_15918449.jpg";
 
 const Blogs: React.FC = () => {
   useEffect(() => {
@@ -12,10 +11,10 @@ const Blogs: React.FC = () => {
   const posts = [
     { id: 1, title: "How to apply PW Coupon Code in 2026", desc: "Step by step guide to get maximum discount on your PW batches.", date: "Oct 12, 2025", path: "/how-to-apply-pw-coupon-code-2026" },
     { id: 2, title: "The PW Revolution in Indian Education", desc: "How Alakh Pandey turned a vision into a movement for millions of students.", date: "Oct 11, 2025", path: "/physics-wallah-revolution-indian-education" },
-    { id: 3, title: "JEE 2026 Strategy with PW Lakshya", desc: "How to use PW resources effectively to crack IIT JEE in your first attempt.", date: "Oct 10, 2025", path: "/jee-2026-strategy-pw-lakshya" },
-    { id: 4, title: "Best NEET Batches in Physics Wallah", desc: "Comparison of Yakeen, Lakshya and Arjuna NEET batches for 2026 aspirants.", date: "Oct 08, 2025", path: "/best-neet-batches-physics-wallah-2026" },
-    { id: 5, title: "PW Offline Vidyapith vs Online Batches", desc: "A complete comparison for 2026 students covering fees, doubt solving and environment.", date: "Oct 05, 2025", path: "/pw-offline-vidyapith-vs-online-batches" },
-    { id: 6, title: "NEET High Weightage Chapters Guide", desc: "Master the important topics in Biology, Physics, and Chemistry for NEET 2026.", date: "Oct 03, 2025", path: "/neet-high-weightage-chapters-guide" },
+    { id: 3, title: "NEET vs JEE: Which Exam Should You Choose?", desc: "A detailed 2026 comparison of syllabus, difficulty, and career scope.", date: "Oct 10, 2025", path: "/neet-vs-jee-2026-comparison-guide" },
+    { id: 4, title: "PW SAT 2026: Details, Syllabus & Registration", desc: "Complete guide to the Physics Wallah Scholarship Admission Test for 2026.", date: "Oct 09, 2025", path: "/pw-sat-scholarship-test-2026" },
+    { id: 5, title: "JEE 2026 Strategy with PW Lakshya", desc: "How to use PW resources effectively to crack IIT JEE in your first attempt.", date: "Oct 08, 2025", path: "/jee-2026-strategy-pw-lakshya" },
+    { id: 6, title: "Best NEET Batches in Physics Wallah", desc: "Comparison of Yakeen, Lakshya and Arjuna NEET batches for 2026 aspirants.", date: "Oct 07, 2025", path: "/best-neet-batches-physics-wallah-2026" },
   ];
 
   return (
@@ -32,7 +31,7 @@ const Blogs: React.FC = () => {
                <img 
                 src={BANNER_IMAGE} 
                 alt={post.title} 
-                className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover object-center opacity-80 group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute top-4 left-4 bg-pw-yellow text-pw-dark text-[10px] font-black px-3 py-1.5 rounded uppercase tracking-widest shadow-lg">2026 UPDATE</div>
             </div>

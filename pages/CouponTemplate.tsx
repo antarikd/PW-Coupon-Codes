@@ -1,10 +1,9 @@
-
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PAGE_DATA, PRIMARY_COUPON } from '../constants';
 import CouponCard from '../components/CouponCard';
 
-const BANNER_IMAGE = "https://scontent.fccu22-1.fna.fbcdn.net/v/t39.30808-6/607131865_122151085334737608_7118691726728882233_n.webp?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qhNIxino_Q4Q7kNvwFAgjLh&_nc_oc=Admi8DjeZ5xvvSwXyVZRTtzfGVzE0P8MUTMvwR_I-kK5BAe8jpdZXNSlR4mu4fQfBS0&_nc_zt=23&_nc_ht=scontent.fccu22-1.fna&_nc_gid=jdp7VVUlw0Ls-fjS3nZlhA&oh=00_AfmQpR89KdQh32s5VuucrJN9laV_y2rHCaiWV820WP9FTg&oe=69542526";
+const BANNER_IMAGE = "https://png.pngtree.com/background/20250120/original/pngtree-best-platforms-for-digital-education-and-e-learning-picture-image_15918449.jpg";
 
 interface CouponTemplateProps {
   pageKey: 'pwCoupon' | 'jee' | 'neet' | 'gate';
@@ -56,7 +55,7 @@ const CouponTemplate: React.FC<CouponTemplateProps> = ({ pageKey }) => {
           <img 
             src={BANNER_IMAGE} 
             alt={`${data.h1} verified discount banner`} 
-            className="w-full h-auto rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl border-4 md:border-8 border-white object-cover max-h-[450px]"
+            className="w-full h-auto rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl border-4 md:border-8 border-white object-cover object-center max-h-[450px]"
           />
         </div>
 

@@ -12,6 +12,8 @@ import NEETComparisonBlog from './pages/NEETComparisonBlog';
 import VidyapithVsOnlineBlog from './pages/VidyapithVsOnlineBlog';
 import NEETWeightageBlog from './pages/NEETWeightageBlog';
 import PWRevolutionBlog from './pages/PWRevolutionBlog';
+import PWSATBlog from './pages/PWSATBlog';
+import NeetVsJeeBlog from './pages/NeetVsJeeBlog';
 import Disclaimer from './pages/Disclaimer';
 
 const App: React.FC = () => {
@@ -31,6 +33,8 @@ const App: React.FC = () => {
           <Route path="/pw-offline-vidyapith-vs-online-batches" element={<VidyapithVsOnlineBlog />} />
           <Route path="/neet-high-weightage-chapters-guide" element={<NEETWeightageBlog />} />
           <Route path="/physics-wallah-revolution-indian-education" element={<PWRevolutionBlog />} />
+          <Route path="/pw-sat-scholarship-test-2026" element={<PWSATBlog />} />
+          <Route path="/neet-vs-jee-2026-comparison-guide" element={<NeetVsJeeBlog />} />
           <Route path="/edu-offers" element={<EduOffers />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           {/* Catch all for SEO friendliness */}

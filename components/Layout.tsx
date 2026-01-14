@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NAV_LINKS } from '../constants';
@@ -14,8 +13,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
-              <Link to="/" className="text-2xl font-bold tracking-tight text-pw-yellow">
-                PW<span className="text-white">COUPON</span>
+              <Link to="/" className="flex items-center gap-2 group">
+                <img src="/favicon.png" alt="PW Coupon Hub Logo" className="w-8 h-8 sm:w-10 sm:h-10 transform transition-transform group-hover:scale-110" />
+                <span className="text-xl sm:text-2xl font-black tracking-tighter text-pw-yellow italic">
+                  PW<span className="text-white">COUPON</span>
+                </span>
               </Link>
             </div>
             
@@ -88,7 +90,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/5 pb-16">
             <div className="md:col-span-1">
-              <h3 className="text-xl font-bold text-pw-yellow mb-6">PW Coupon Hub</h3>
+              <div className="flex items-center gap-2 mb-6">
+                <img src="/favicon.png" alt="PW Logo" className="w-8 h-8 opacity-90" />
+                <h3 className="text-xl font-bold text-pw-yellow">PW Coupon Hub</h3>
+              </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
                 Providing verified Physics Wallah coupon codes for 2026 sessions. Join thousands of students saving on quality JEE, NEET, and GATE coaching.
               </p>

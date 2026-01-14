@@ -9,28 +9,27 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navigation */}
-      <nav className="bg-pw-dark text-white sticky top-0 z-50 shadow-lg">
+      <nav className="bg-pw-dark text-white sticky top-0 z-50 shadow-lg border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-16 md:h-20">
             <div className="flex-shrink-0">
-              <Link to="/" className="flex items-center gap-2 group">
-                <img src="/favicon.png" alt="PW Coupon Hub Logo" className="w-8 h-8 sm:w-10 sm:h-10 transform transition-transform group-hover:scale-110" />
-                <span className="text-xl sm:text-2xl font-black tracking-tighter text-pw-yellow italic">
+              <Link to="/" className="flex items-center group">
+                <span className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter text-pw-yellow italic">
                   PW<span className="text-white">COUPON</span>
                 </span>
               </Link>
             </div>
             
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
+            <div className="hidden lg:block">
+              <div className="ml-10 flex items-center space-x-6">
                 {NAV_LINKS.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    className={`px-3 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all ${
                       location.pathname === link.path
-                        ? 'bg-pw-yellow text-pw-dark'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                        ? 'bg-pw-yellow text-pw-dark shadow-md'
+                        : 'text-gray-300 hover:text-white hover:bg-white/5'
                     }`}
                   >
                     {link.label}
@@ -39,10 +38,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               </div>
             </div>
 
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none transition-colors"
               >
                 <span className="sr-only">Open main menu</span>
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,14 +58,14 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-pw-dark border-t border-gray-700">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="lg:hidden bg-pw-dark border-t border-gray-700 animate-fade-in">
+            <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  className={`block px-4 py-3 rounded-md text-sm font-black uppercase tracking-widest ${
                     location.pathname === link.path
                       ? 'bg-pw-yellow text-pw-dark'
                       : 'text-gray-300 hover:bg-gray-700 hover:text-white'
@@ -91,8 +90,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/5 pb-16">
             <div className="md:col-span-1">
               <div className="flex items-center gap-2 mb-6">
-                <img src="/favicon.png" alt="PW Logo" className="w-8 h-8 opacity-90" />
-                <h3 className="text-xl font-bold text-pw-yellow">PW Coupon Hub</h3>
+                <h3 className="text-xl font-black text-pw-yellow uppercase tracking-tighter italic">PW Coupon Hub</h3>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
                 Providing verified Physics Wallah coupon codes for 2026 sessions. Join thousands of students saving on quality JEE, NEET, and GATE coaching.
